@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">USD2EU</string>
+    <string name="titleText">USD 2 EU</string>
+    <string name="moneyHint">Enter amount.</string>
+    <string name="resultText">Result:</string>
+    <string name="convertBtn">Convert</string>
+    <string name="eurToggle">Euro 2 USD</string>
+    <string name="usdToggle">USD 2 Euro</string>
+</resources>
