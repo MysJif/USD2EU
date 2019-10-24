@@ -2,10 +2,7 @@ package com.example.usd2eu
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.Button
-import android.widget.EditText
-import android.widget.TextView
-import android.widget.ToggleButton
+import android.widget.*
 import org.w3c.dom.Text
 import java.text.DecimalFormat
 
@@ -21,6 +18,7 @@ class MainActivity : AppCompatActivity() {
         val result = findViewById<TextView>(R.id.idResultView)
         val dollarFormat = DecimalFormat("$#,###.00")
         val euroFormat = DecimalFormat("€#,###.00")
+        val bigToast = Toast.makeText(applicationContext, "Big Spender: Over 10k", Toast.LENGTH_SHORT)
 
         var convertBool = false
 
@@ -40,6 +38,10 @@ class MainActivity : AppCompatActivity() {
             } else {
                 result = amount * .9
                 resultS = dollarFormat.format(result)
+            }
+
+            if (result >= 10000.00) {
+                bigToast.show()
             }
             return resultS
         }
